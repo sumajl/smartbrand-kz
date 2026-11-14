@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>SmartBrand KZ — App</title>
+  <meta name="description" content="Create ready Instagram posts for your café or shop in Kazakh, Russian or English.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Rubik:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <div id="storage-banner" class="storage-banner" hidden data-i18n="err.storage"></div>
+
+  <header class="app-header">
+    <div class="inner">
+      <a class="brand" href="index.html" data-i18n-aria="nav.site">
+        <img src="img/logo.svg" alt="" width="34" height="34">
+        <span>SmartBrand KZ</span>
+      </a>
+      <nav class="app-nav" id="app-nav" aria-label="Main">
+        <a href="#/home" data-route="home" data-i18n="nav.home">Home</a>
+        <a href="#/plan" data-route="plan" data-i18n="nav.plan">Plan</a>
+        <a href="#/settings" data-route="settings" data-i18n="nav.settings">Settings</a>
+      </nav>
+      <button type="button" class="lang-toggle" id="lang-toggle" data-i18n-aria="lang.switchLabel"><span data-i18n="lang.switch">Қазақша</span></button>
+    </div>
+  </header>
+
+  <main id="main" class="app-main" tabindex="-1"></main>
+
+  <div class="toast-wrap" id="toasts" role="status" aria-live="polite"></div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/generator.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
