@@ -99,8 +99,10 @@
       input.removeAttribute('aria-invalid');
       wrap.querySelector('.error').textContent = '';
     }
+    // 'change' on text inputs also fires on blur (e.g. when the error summary takes focus),
+    // which wiped the error the moment it appeared — so text fields clear only on typing.
     input.addEventListener('input', clearError);
-    input.addEventListener('change', clearError);
+    if (input.tagName === 'SELECT') input.addEventListener('change', clearError);
     return wrap;
   }
 
